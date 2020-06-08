@@ -70,7 +70,7 @@ public class Movie {
 	}
 	
 	
-	@JsonBackReference
+	@JsonManagedReference
 	public List<Review> getReviews() {
 		return reviews;
 	}

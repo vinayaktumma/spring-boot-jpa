@@ -40,7 +40,7 @@ public class MovieServiceImpl implements MovieService{
 					resultData.put("message", "Movie Data successfully saved...!");
 				}
 			}else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Movie Data not saved. Rating should be less than or equal to 10...!");
 			}
 		}
@@ -78,11 +78,11 @@ public class MovieServiceImpl implements MovieService{
 					resultData.put("result", "success");
 					resultData.put("message", "Movie Data successfully updated...!");
 				}else {
-					resultData.put("result", "error");
+					resultData.put("result", "warning");
 					resultData.put("message", "Movie Data not saved. Rating should be less than or equal to 10...!");
 				}
 			}else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Movie Data not found...!");
 			}
 		}
@@ -105,7 +105,7 @@ public class MovieServiceImpl implements MovieService{
 				resultData.put("message", "Movie Data successfully deleted...!");
 			}
 			else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Movie Data not found...!");
 			}
 		}

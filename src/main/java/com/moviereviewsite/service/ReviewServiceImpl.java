@@ -39,15 +39,15 @@ public class ReviewServiceImpl implements ReviewService{
 					System.out.println("In isValidRating");
 					Review r1=rresp.save(r);
 					if(r1.getMovie_review_id()!=null) {
-						resultData.put("result", "error");
+						resultData.put("result", "success");
 						resultData.put("message", "Review Data successfully saved...!");
 					}
 				}else {
-					resultData.put("result", "error");
+					resultData.put("result", "warning");
 					resultData.put("message", "Review Data not saved. Rating should be less than or equal to 10...!");
 				}
 			}else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Movie Data not found...!");
 			}
 		}
@@ -78,15 +78,15 @@ public class ReviewServiceImpl implements ReviewService{
 			if(isReviewExists(r.getMovie_review_id())) {
 				if(comut.isValidRating(r.getMovie_rating())) {
 					rresp.save(r);
-					resultData.put("result", "error");
+					resultData.put("result", "success");
 					resultData.put("message", "Review Data successfully updated...!");
 				}else {
-					resultData.put("result", "error");
+					resultData.put("result", "warning");
 					resultData.put("message", "Review Data not updated. Rating should be less than or equal to 10...!");
 				}
 			}
 			else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Review Data not found...!");
 			}
 		}
@@ -108,7 +108,7 @@ public class ReviewServiceImpl implements ReviewService{
 				resultData.put("message", "Review Data successfully deleted...!");
 			}
 			else {
-				resultData.put("result", "error");
+				resultData.put("result", "warning");
 				resultData.put("message", "Review Data not found...!");
 			}
 		}

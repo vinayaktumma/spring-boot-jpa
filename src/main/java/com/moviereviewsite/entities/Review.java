@@ -67,7 +67,7 @@ public class Review {
 		this.movie_review_comments = movie_review_comments;
 	}
 	
-	@JsonManagedReference
+	@JsonBackReference
 	public Movie getMovie() {
 		return movie;
 	}

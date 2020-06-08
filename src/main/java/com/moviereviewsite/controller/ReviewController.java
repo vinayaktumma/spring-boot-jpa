@@ -43,8 +43,8 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(value="/getAllReviews", method=RequestMethod.GET)
-	public List<Review> getAllReviews(@RequestParam String reviewComment) throws Exception {
-		return rserv.getAllReviews(reviewComment);
+	public List<Review> getAllReviews() throws Exception {
+		return rserv.getAllReviews();
 	}
 
 }
